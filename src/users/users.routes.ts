@@ -113,7 +113,7 @@ userRouter.delete("/user/:id", async (req: Request, res: Response) => {
 
         await database.remove(req.params.id);
 
-        return res.status(StatusCodes.OK).json({ msg: "User deleted successfully" });
+        return res.status(StatusCodes.OK).json({ msg: "User deleted" });
     } catch (error) {
         return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: "Internal Server Error" });
     }
